@@ -13,7 +13,7 @@ pipeline {
         stage('Compile Java') {
             steps {
                 bat '''
-                javac src\\HelloWorld.java
+                javac HelloWorld.java
                 '''
             }
         }
@@ -21,7 +21,7 @@ pipeline {
         stage('Run Program') {
             steps {
                 bat '''
-                java -cp src HelloWorld
+                java HelloWorld
                 '''
             }
         }
